@@ -1,38 +1,13 @@
-# create-svelte
+# sveltekit-6440
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Reproduction of https://github.com/sveltejs/kit/issues/6440
 
-## Creating a project
+### Reproduce error
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. `npm i`
+2. `npm run build`
+3. `node build`
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Error: `Error: Dynamic require of "stream" is not supported`
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+**Note**: There is a [manual workaround](https://github.com/sveltejs/kit/issues/6440#issuecomment-1236823838), but it is not feasible to use in an automated way.
